@@ -1,0 +1,6 @@
+{
+  "name": "Syllabus Tracker",
+  "description": "Material 3 Syllabus Tracker for monitoring subject and chapter completion across lectures, notes, practice, and extra study.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,225 @@
+import type { Chapter, Subject } from '../types/syllabus';
+
+function ch(
+  id: string,
+  name: string,
+  lecture = false,
+  notes = false,
+  practice = false,
+  extra = false,
+): Chapter {
+  return {
+    id,
+    name,
+    milestones: { lecture, notes, practice, extra },
+  };
+}
+
+export const INITIAL_SYLLABUS: Subject[] = [
+  {
+    id: 'science',
+    name: 'Science',
+    accent: 'mint',
+    subSubjects: [
+      {
+        id: 'physics',
+        name: 'Physics',
+        chapters: [
+          ch('sci-phy-1', 'Ch 1: Light – Reflection and Refraction'),
+          ch('sci-phy-2', 'Ch 2: The Human Eye and the Colourful World'),
+          ch('sci-phy-3', 'Ch 3: Electricity'),
+          ch('sci-phy-4', 'Ch 4: Magnetic Effects of Electric Current'),
+          ch('sci-phy-5', 'Ch 5: Our Environment'),
+        ],
+      },
+      {
+        id: 'chemistry',
+        name: 'Chemistry',
+        chapters: [
+          ch('sci-chem-1', 'Ch 1: Chemical Reactions and Equations'),
+          ch('sci-chem-2', 'Ch 2: Acids, Bases and Salts'),
+          ch('sci-chem-3', 'Ch 3: Metals and Non-metals'),
+          ch('sci-chem-4', 'Ch 4: Carbon and its Compounds'),
+        ],
+      },
+      {
+        id: 'biology',
+        name: 'Biology',
+        chapters: [
+          ch('sci-bio-1', 'Ch 1: Life Processes'),
+          ch('sci-bio-2', 'Ch 2: Control and Coordination'),
+          ch('sci-bio-3', 'Ch 3: How do Organisms Reproduce?'),
+          ch('sci-bio-4', 'Ch 4: Heredity'),
+        ],
+      },
+    ],
+  },
+  {
+    id: 'sst',
+    name: 'Social Science',
+    accent: 'apricot',
+    subSubjects: [
+      {
+        id: 'history',
+        name: 'History',
+        chapters: [
+          ch('sst-his-1', 'Ch 1: The Rise of Nationalism in Europe'),
+          ch('sst-his-2', 'Ch 2: Nationalism in India'),
+          ch('sst-his-3', 'Ch 3: The Making of a Global World'),
+          ch('sst-his-4', 'Ch 4: Print Culture and the Modern World'),
+          ch('sst-his-5', 'Ch 5: The Age of Industrialisation'),
+        ],
+      },
+      {
+        id: 'geography',
+        name: 'Geography',
+        chapters: [
+          ch('sst-geo-1', 'Ch 1: Resources and Development'),
+          ch('sst-geo-2', 'Ch 2: Forest and Wildlife Resources'),
+          ch('sst-geo-3', 'Ch 3: Water Resources'),
+          ch('sst-geo-4', 'Ch 4: Agriculture'),
+          ch('sst-geo-5', 'Ch 5: Minerals and Energy Resources'),
+          ch('sst-geo-6', 'Ch 6: Manufacturing Industries'),
+          ch('sst-geo-7', 'Ch 7: Lifelines of National Economy'),
+        ],
+      },
+      {
+        id: 'civics',
+        name: 'Political Science (Civics)',
+        chapters: [
+          ch('sst-civ-1', 'Ch 1: Power-sharing'),
+          ch('sst-civ-2', 'Ch 2: Federalism'),
+          ch('sst-civ-3', 'Ch 3: Gender, Religion and Caste'),
+          ch('sst-civ-4', 'Ch 4: Political Parties'),
+          ch('sst-civ-5', 'Ch 5: Outcomes of Democracy'),
+        ],
+      },
+      {
+        id: 'economics',
+        name: 'Economics',
+        chapters: [
+          ch('sst-eco-1', 'Ch 1: Development'),
+          ch('sst-eco-2', 'Ch 2: Sectors of the Indian Economy'),
+          ch('sst-eco-3', 'Ch 3: Money and Credit'),
+          ch('sst-eco-4', 'Ch 4: Globalisation and the Indian Economy'),
+          ch('sst-eco-5', 'Ch 5: Consumer Rights'),
+        ],
+      },
+    ],
+  },
+  {
+    id: 'maths',
+    name: 'Mathematics',
+    accent: 'sky',
+    subSubjects: [
+      {
+        id: 'maths-core',
+        name: 'Maths',
+        chapters: [
+          ch('math-1', 'Ch 1: Real Numbers'),
+          ch('math-2', 'Ch 2: Polynomials'),
+          ch('math-3', 'Ch 3: Pair of Linear Equations in Two Variables'),
+          ch('math-4', 'Ch 4: Quadratic Equations'),
+          ch('math-5', 'Ch 5: Arithmetic Progressions'),
+          ch('math-6', 'Ch 6: Triangles'),
+          ch('math-7', 'Ch 7: Coordinate Geometry'),
+          ch('math-8', 'Ch 8: Introduction to Trigonometry'),
+          ch('math-9', 'Ch 9: Some Applications of Trigonometry'),
+          ch('math-10', 'Ch 10: Circles'),
+          ch('math-11', 'Ch 11: Areas Related to Circles'),
+          ch('math-12', 'Ch 12: Surface Areas and Volumes'),
+          ch('math-13', 'Ch 13: Statistics'),
+          ch('math-14', 'Ch 14: Probability'),
+        ],
+      },
+    ],
+  },
+  {
+    id: 'english',
+    name: 'English',
+    accent: 'rose',
+    subSubjects: [
+      {
+        id: 'first-flight',
+        name: 'First Flight',
+        chapters: [
+          ch('eng-ff-1', 'A Letter to God'),
+          ch('eng-ff-2', 'Nelson Mandela: Long Walk to Freedom'),
+          ch('eng-ff-3', 'Two Stories about Flying'),
+          ch('eng-ff-4', 'From the Diary of Anne Frank'),
+          ch('eng-ff-5', 'Glimpses of India'),
+          ch('eng-ff-6', 'Mijbil the Otter'),
+          ch('eng-ff-7', 'Madam Rides the Bus'),
+          ch('eng-ff-8', 'The Sermon at Benares'),
+          ch('eng-ff-9', 'The Proposal'),
+          ch('eng-ff-p1', 'Dust of Snow (Poem)'),
+          ch('eng-ff-p2', 'Fire and Ice (Poem)'),
+          ch('eng-ff-p3', 'A Tiger in the Zoo (Poem)'),
+          ch('eng-ff-p4', 'How to Tell Wild Animals (Poem)'),
+          ch('eng-ff-p5', 'The Ball Poem (Poem)'),
+          ch('eng-ff-p6', 'Amanda! (Poem)'),
+          ch('eng-ff-p7', 'The Trees (Poem)'),
+          ch('eng-ff-p8', 'Fog (Poem)'),
+          ch('eng-ff-p9', 'The Tale of Custard the Dragon (Poem)'),
+          ch('eng-ff-p10', 'For Anne Gregory (Poem)'),
+        ],
+      },
+      {
+        id: 'footprints-without-feet',
+        name: 'Footprints Without Feet',
+        chapters: [
+          ch('eng-fwf-1', 'A Triumph of Surgery'),
+          ch('eng-fwf-2', "The Thief's Story"),
+          ch('eng-fwf-3', 'The Midnight Visitor'),
+          ch('eng-fwf-4', 'A Question of Trust'),
+          ch('eng-fwf-5', 'Footprints without Feet'),
+          ch('eng-fwf-6', 'The Making of a Scientist'),
+          ch('eng-fwf-7', 'The Necklace'),
+          ch('eng-fwf-8', 'Bholi'),
+          ch('eng-fwf-9', 'The Book That Saved the Earth'),
+        ],
+      },
+    ],
+  },
+  {
+    id: 'hindi',
+    name: 'Hindi',
+    accent: 'lavender',
+    subSubjects: [
+      {
+        id: 'kshitiz',
+        name: 'Kshitiz',
+        chapters: [
+          ch('hin-ks-1', 'Ch 1: Surdas ke Pad (Kavya Khand)'),
+          ch('hin-ks-2', 'Ch 2: Ram-Lakshman-Parashuram Samvad (Kavya Khand)'),
+          ch('hin-ks-3', 'Ch 3: Dev – Savaiya aur Kabitt (Kavya Khand)'),
+          ch('hin-ks-4', 'Ch 4: Atmakathya – Jaishankar Prasad (Kavya Khand)'),
+          ch('hin-ks-5', 'Ch 5: Utsah aur At Nahi Rahi Hai (Kavya Khand)'),
+          ch('hin-ks-6', 'Ch 6: Yeh Danturit Muskan aur Fasal (Kavya Khand)'),
+          ch('hin-ks-7', 'Ch 7: Chhaya Mat Chhuna (Kavya Khand)'),
+          ch('hin-ks-8', 'Ch 8: Kanyadan (Kavya Khand)'),
+          ch('hin-ks-9', 'Ch 9: Sangatkar (Kavya Khand)'),
+          ch('hin-ks-10', 'Ch 10: Netaji ka Chashma (Gadya Khand)'),
+          ch('hin-ks-11', 'Ch 11: Balgobin Bhagat (Gadya Khand)'),
+          ch('hin-ks-12', 'Ch 12: Lakhnavi Andaz (Gadya Khand)'),
+          ch('hin-ks-13', 'Ch 13: Manviya Karuna ki Divya Chamak (Gadya Khand)'),
+          ch('hin-ks-14', 'Ch 14: Ek Kahani Yeh Bhi (Gadya Khand)'),
+          ch('hin-ks-15', 'Ch 15: Stri Shiksha ke Virodhi Kutarkon ka Khandan (Gadya Khand)'),
+          ch('hin-ks-16', 'Ch 16: Naubatkhane mein Ibadat (Gadya Khand)'),
+          ch('hin-ks-17', 'Ch 17: Sanskriti (Gadya Khand)'),
+        ],
+      },
+      {
+        id: 'kritika',
+        name: 'Kritika',
+        chapters: [
+          ch('hin-kr-1', 'Ch 1: Mata ka Aanchal'),
+          ch('hin-kr-2', 'Ch 2: George Pancham ki Naak'),
+          ch('hin-kr-3', 'Ch 3: Sana Sana Hath Jodi'),
+          ch('hin-kr-4', 'Ch 4: Ek Kahani Yeh Bhi'),
+          ch('hin-kr-5', 'Ch 5: Main Kyun Likhata Hoon'),
+        ],
+      },
+    ],
+  },
+];
