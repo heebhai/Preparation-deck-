@@ -1,0 +1,15 @@
+{
+  "name": "Syllabus Tracker",
+  "short_name": "Syllabus",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#5B4BC4",
+  "icons": [
+    {
+      "src": "https://heebhai.github.io/Preparation-deck-/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
